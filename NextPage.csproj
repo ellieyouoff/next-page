@@ -1,0 +1,133 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Models\" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Data\" />
+    <None Remove="MonoDevelop.Addins" />
+    <None Remove="DotNetCore.Debugger" />
+    <None Remove="Microsoft.JavaScript.Debugger" />
+    <None Remove="Microsoft.VisualStudio.Mac.RazorAddin" />
+    <None Remove="Microsoft.VisualStudio.TypeScriptAddin.TypeScriptAddin" />
+    <None Remove="Microsoft.VisualStudio.WebTools.WebEditors" />
+    <None Remove="Microsoft.VisualStudioMac.AddinMaker" />
+    <None Remove="MonoDevelop.AspNet" />
+    <None Remove="MonoDevelop.AspNetCore" />
+    <None Remove="MonoDevelop.AssemblyBrowser" />
+    <None Remove="MonoDevelop.Autotools" />
+    <None Remove="MonoDevelop.AzureFunctions" />
+    <None Remove="MonoDevelop.ConnectedServices" />
+    <None Remove="MonoDevelop.CSharpBinding" />
+    <None Remove="MonoDevelop.Debugger" />
+    <None Remove="MonoDevelop.Debugger.Soft" />
+    <None Remove="MonoDevelop.Debugger.Soft.AspNet" />
+    <None Remove="MonoDevelop.Debugger.VsCodeDebugProtocol" />
+    <None Remove="MonoDevelop.Deployment" />
+    <None Remove="MonoDevelop.DesignerSupport" />
+    <None Remove="MonoDevelop.Docker" />
+    <None Remove="MonoDevelop.DotNetCore" />
+    <None Remove="MonoDevelop.Gettext" />
+    <None Remove="MonoDevelop.HexEditor" />
+    <None Remove="MonoDevelop.MacPlatform" />
+    <None Remove="MonoDevelop.MonoMac" />
+    <None Remove="MonoDevelop.PackageManagement" />
+    <None Remove="MonoDevelop.PerformanceDiagnostics" />
+    <None Remove="MonoDevelop.UnitTesting" />
+    <None Remove="MonoDevelop.VersionControl.Azure.DevOps" />
+    <None Remove="MonoDevelop.VersionControl.Git" />
+    <None Remove="Xamarin.Android.Deploy" />
+    <None Remove="Xamarin.AndroidDesigner" />
+    <None Remove="Xamarin.AzureMobileAppService" />
+    <None Remove="Xamarin.AzureSupport" />
+    <None Remove="Xamarin.Designer" />
+    <None Remove="Xamarin.Forms.Addin" />
+    <None Remove="Xamarin.FormsEditor" />
+    <None Remove="Xamarin.HotReload" />
+    <None Remove="Xamarin.Ide.Identity" />
+    <None Remove="Xamarin.Terminal.Xamarin.Terminal" />
+    <None Remove="Xamarin.XamlLanguageService" />
+    <None Remove="Xamarin.XcodeIntegration" />
+    <None Remove="VisualFSharp" />
+    <None Remove="Pages\Admin\" />
+    <None Remove="Models\ViewModels\" />
+    <None Remove="Microsoft.Extensions.Identity.Stores" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="Microsoft.Extensions.Identity.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Data\" />
+    <Folder Include="Pages\Admin\" />
+    <Folder Include="Models\ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="7.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="7.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddinReference Include="DotNetCore.Debugger" />
+    <AddinReference Include="Microsoft.JavaScript.Debugger" />
+    <AddinReference Include="Microsoft.VisualStudio.Mac.RazorAddin" />
+    <AddinReference Include="Microsoft.VisualStudio.TypeScriptAddin.TypeScriptAddin" />
+    <AddinReference Include="Microsoft.VisualStudio.WebTools.WebEditors" />
+    <AddinReference Include="Microsoft.VisualStudioMac.AddinMaker" />
+    <AddinReference Include="MonoDevelop.AspNet" />
+    <AddinReference Include="MonoDevelop.AspNetCore" />
+    <AddinReference Include="MonoDevelop.AssemblyBrowser" />
+    <AddinReference Include="MonoDevelop.Autotools" />
+    <AddinReference Include="MonoDevelop.AzureFunctions" />
+    <AddinReference Include="MonoDevelop.ConnectedServices" />
+    <AddinReference Include="MonoDevelop.CSharpBinding" />
+    <AddinReference Include="MonoDevelop.Debugger" />
+    <AddinReference Include="MonoDevelop.Debugger.Soft" />
+    <AddinReference Include="MonoDevelop.Debugger.Soft.AspNet" />
+    <AddinReference Include="MonoDevelop.Debugger.VsCodeDebugProtocol" />
+    <AddinReference Include="MonoDevelop.Deployment" />
+    <AddinReference Include="MonoDevelop.DesignerSupport" />
+    <AddinReference Include="MonoDevelop.Docker" />
+    <AddinReference Include="MonoDevelop.DotNetCore" />
+    <AddinReference Include="MonoDevelop.Gettext" />
+    <AddinReference Include="MonoDevelop.HexEditor" />
+    <AddinReference Include="MonoDevelop.MacPlatform" />
+    <AddinReference Include="MonoDevelop.MonoMac" />
+    <AddinReference Include="MonoDevelop.PackageManagement" />
+    <AddinReference Include="MonoDevelop.PerformanceDiagnostics" />
+    <AddinReference Include="MonoDevelop.UnitTesting" />
+    <AddinReference Include="MonoDevelop.VersionControl.Azure.DevOps" />
+    <AddinReference Include="MonoDevelop.VersionControl.Git" />
+    <AddinReference Include="Xamarin.Android.Deploy" />
+    <AddinReference Include="Xamarin.AndroidDesigner" />
+    <AddinReference Include="Xamarin.AzureMobileAppService" />
+    <AddinReference Include="Xamarin.AzureSupport" />
+    <AddinReference Include="Xamarin.Designer" />
+    <AddinReference Include="Xamarin.Forms.Addin" />
+    <AddinReference Include="Xamarin.FormsEditor" />
+    <AddinReference Include="Xamarin.HotReload" />
+    <AddinReference Include="Xamarin.Ide.Identity" />
+    <AddinReference Include="Xamarin.Terminal.Xamarin.Terminal" />
+    <AddinReference Include="Xamarin.XamlLanguageService" />
+    <AddinReference Include="Xamarin.XcodeIntegration" />
+    <AddinReference Include="VisualFSharp" />
+  </ItemGroup>
+
+<ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0" />
+</ItemGroup>
+
+</Project>

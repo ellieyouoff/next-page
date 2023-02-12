@@ -1,0 +1,51 @@
+﻿<Properties StartupConfiguration="{BCF310BE-3FA5-4A82-981A-86FB09311111}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+    <Files>
+      <File FileName="Program.cs" Line="44" Column="1" />
+      <File FileName="Pages/Login.cshtml.cs" />
+      <File FileName="../../../../../../usr/local/share/dotnet/sdk/7.0.102/Microsoft.Common.CurrentVersion.targets" Line="4752" Column="5" />
+      <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="Pages/Shared/_Layout.cshtml" Line="2" Column="24" />
+      <File FileName="Pages/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Shared/_Layout.cshtml.css" Line="1" Column="1" />
+      <File FileName="Pages/Error.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Pages/Index.cshtml.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NextPage" expanded="True">
+            <Node name="NextPage" expanded="True">
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ViewModels" expanded="True" />
+              </Node>
+              <Node name="Pages" expanded="True">
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" expanded="True" />
+                </Node>
+                <Node name="Index.cshtml" expanded="True" />
+                <Node name="Login.cshtml" expanded="True" />
+                <Node name="Logout.cshtml" expanded="True" />
+                <Node name="Privacy.cshtml" expanded="True" />
+                <Node name="Registration.cshtml" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.NextPage PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+</Properties>
