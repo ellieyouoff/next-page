@@ -1,0 +1,73 @@
+@model NP.Models.Location
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<hr />
+
+
+
+<div class="container">
+    <h4 class="py-2">@Model.Name</h4>
+
+    <div class="row">
+        <div class="col">
+            <img class="pb-4" src="@Model.Img" style="width:460px; height:320px; object-fit:cover" alt="location image" />
+
+            <p>Added by: @Model.AddedBy.UserName</p>
+            <p>Email: @Model.Email</p>
+            <p>Country: @Model.Country</p>
+
+            <p>City: @Model.City</p>
+
+            <p style="color:grey">@Model.Description</p>
+        </div>
+        <div class="col overflow-auto">
+            <h5 class="pb-2 bt-4">Books available at location</h5>
+            @if (Model.BooksStored.Count != 0)
+                {
+                @foreach (var item in Model.BooksStored)
+                    {
+                    <div class="col-lg-4 col-sm-12 pt-5">
+                        <div class="card p-2 border-0">
+                            <div class="card-body">
+                                <img src="@item.Img" class="card-img-top pb-3" style="width:320px;height:500px;object-fit:cover" alt="...">
+                                <div class="row">
+                                    <div class="col-7 py-3">
+                                        <button type="button" class="btn btn-primary btn-sm opacity-50">@Html.DisplayFor(modelItem => item.Genre)</button>
+                                    </div>
+                                </div>
+                                <h4 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h4>
+                                <h6 class="card-text">Author: @Html.DisplayFor(modelItem => item.Author)</h6>
+
+                                <p class="card-text" style="color:lightgrey">Difficulty: @Html.DisplayFor(modelItem => item.Difficulty)</p>
+                                <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+                                <button class="btn btn-primary">Take This Book</button>
+                                <button class="btn btn-secondary" asp-controller="Book" asp-action="Details(item)">Details</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    } }
+                else
+                {
+                <div class="row">
+                    <p>No books are currently stored at this location.</p>
+                </div>
+                }
+        </div>
+    </div>
+    
+    <div>
+        <h5>Other locations nearby:</h5>
+        //CODE
+{
+
+}
+    </div>
+
+</div>
+
+

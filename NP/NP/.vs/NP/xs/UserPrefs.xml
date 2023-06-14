@@ -1,0 +1,51 @@
+﻿<Properties StartupConfiguration="{2C42DEAC-D951-4DAB-8CBE-91864D2761BB}|https">
+  <MonoDevelop.Ide.ItemProperties.NP PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Recommender/PearsonCorrelation.cs">
+    <Files>
+      <File FileName="Views/Account/Login.cshtml" Line="31" Column="46" />
+      <File FileName="Views/Account/Register.cshtml" Line="50" Column="50" />
+      <File FileName="Views/Book/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Cabinet/CurrentlyInPosession.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="36" Column="42" />
+      <File FileName="Views/Book/Details.cshtml" Line="7" Column="1" />
+      <File FileName="Search/KMP.cs" Line="1" Column="1" />
+      <File FileName="Views/Book/Search.cshtml" Line="7" Column="43" />
+      <File FileName="Views/Cabinet/Index.cshtml" Line="27" Column="14" />
+      <File FileName="Controllers/CabinetController.cs" Line="55" Column="1" />
+      <File FileName="Recommender/DataPreprocessor.cs" Line="3" Column="15" />
+      <File FileName="Recommender/CosineSimilarity.cs" Line="1" Column="1" />
+      <File FileName="Models/ViewModels/LoginViewModel.cs" Line="1" Column="1" />
+      <File FileName="Models/ViewModels/RegisterViewModel.cs" Line="1" Column="1" />
+      <File FileName="Controllers/AccountController.cs" Line="1" Column="1" />
+      <File FileName="Recommender/PearsonCorrelation.cs" Line="12" Column="11" />
+      <File FileName="Recommender/Recommender.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NP" expanded="True">
+            <Node name="NP" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Recommender" expanded="True">
+                <Node name="PearsonCorrelation.cs" selected="True" />
+              </Node>
+              <Node name="Search" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Account" expanded="True" />
+                <Node name="Book" expanded="True" />
+                <Node name="Cabinet" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

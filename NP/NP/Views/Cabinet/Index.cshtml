@@ -1,0 +1,29 @@
+﻿@*Define model*@
+@model IEnumerable<Book>
+
+@using Microsoft.AspNetCore.Identity;
+@using NP.Models;
+@*Define view data*@
+@{
+    ViewData["Title"] = "Personal Cabinet";
+}
+
+@inject UserManager<User> userManager
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var currentUser = userManager.GetUserAsync(User).Result;
+}
+
+<div class="container">
+    <h1 class="pb-2">Personal Cabinet</h1>
+    <p class="fs-5" style="color:darkgray">@currentUser.UserName</p>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" asp-area="" asp-controller="Cabinet" asp-action="CurrentlyInPosession">Currently Mine</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Cabinet" asp-action="PostedByMe">Posted</a>
+        </li>
+    </ul>
+</div>

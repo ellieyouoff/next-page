@@ -1,0 +1,61 @@
+﻿@*Define model*@
+@model IEnumerable<Book>
+@using Microsoft.AspNetCore.Identity;
+@using NP.Models;
+@inject UserManager<User> userManager
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var currentUser = userManager.GetUserAsync(User).Result;
+}
+@using NP.Controllers
+
+@*Define view data*@
+@{
+    ViewData["Title"] = "Posted By Me";
+}
+
+<div class="container">
+    <h1 class="pb-2">Personal Cabinet</h1>
+    <p class="fs-5" style="color:darkgray">@currentUser.UserName</p>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Cabinet" asp-action="CurrentlyInPosession">Currently Mine</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" asp-area="" asp-controller="Cabinet" asp-action="PostedByMe">Posted</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">History</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link href="#">Wishlist</a>
+        </li>
+    </ul>
+</div>
+@foreach (var item in Model)
+{
+    <div class="col-lg-4 col-sm-12 pt-5">
+        <div class="card p-2 border-0">
+            <div class="card-body">
+                <img src="@item.Img" class="card-img-top pb-3" style="width:320px;height:500px;object-fit:cover" alt="...">
+                <div class="row">
+                    <div class="col-7 py-3">
+                        <button type="button" class="btn btn-primary btn-sm opacity-50">@Html.DisplayFor(modelItem => item.Genre)</button>
+                    </div>
+                </div>
+                <h4 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h4>
+                <h6 class="card-text">Author: @Html.DisplayFor(modelItem => item.Author)</h6>
+
+                <p class="card-text" style="color:lightgrey">Difficulty: @Html.DisplayFor(modelItem => item.Difficulty)</p>
+   
+                <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+                <a href="#" class="btn btn-dark ms-3" style="width:250px">Details</a>
+            </div>
+
+        </div>
+    </div>
+}
+<div>
+
+</div>

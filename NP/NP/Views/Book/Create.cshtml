@@ -1,0 +1,130 @@
+@model NP.Models.Book
+@using Microsoft.AspNetCore.Identity;
+@using NP.Models;
+@inject UserManager<User> userManager
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var currentUser = userManager.GetUserAsync(User).Result;
+}
+@using NP.Controllers
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<AuthorizeView>
+    <Authorized>
+        <div class="container ">
+            <h1>Create Book</h1>
+            <hr />
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <form enctype="multipart/form-data" asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group py-2">
+
+                            <label asp-for="Img" class="control-label">Image URL: </label>
+                            <input asp-for="Img" class="form-control" />
+                            <span asp-validation-for="Img" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group py-2">
+                            <div class="row">
+                                <div class="col">
+                                    <label asp-for="Title" class="control-label">Title: </label>
+                                    <input asp-for="Title" class="form-control" />
+                                    <span asp-validation-for="Title" class="text-danger"></span>
+                                </div>
+                                <div class="col">
+                                    <label asp-for="Author" class="control-label">Author: </label>
+                                    <input asp-for="Author" class="form-control" />
+                                    <span asp-validation-for="Author" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group py-2">
+                            <textarea asp-for="Description" class="form-control" rows="4" placeholder="Provide a short description for the book..."></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group py-2">
+                            <div class="row">
+                                <div class="col">
+                                    <label asp-for="Published" class="control-label">Published: </label>
+                                    <input asp-for="Published" type="date" class="form-control" />
+                                    <span asp-validation-for="Published" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        @*PICKER*@
+                        <div class="form-group pt-4 pb-2">
+                            <div class="row">
+                                <div class="col">
+                                    <label asp-for="Genre" class="control-label">Genre: </label>
+                                </div>
+                                <div class="col">
+                                    <select asp-for="Genre " class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                        <option selected>Genre</option>
+                                        @foreach (var genre in BookController.GetGenres())
+                                        {
+                                            <option value=@genre>@Html.DisplayFor(g => genre)</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        @*PICKER*@
+                        <div class="form-group py-2">
+                            <div class="row">
+                                <div class="col">
+                                    <label asp-for="Difficulty" class="control-label">Difficulty: </label>
+                                </div>
+                                <div class="col">
+                                    <select asp-for="Difficulty " class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                        <option selected>Difficulty</option>
+                                        <option value="1">Easy</option>
+                                        <option value="2">Medium</option>
+                                        <option value="3">Difficult</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        @*USER AUTO*@
+                        <div class="form-group py-2">
+                            <label asp-for="PostedById" class="control-label">Posted by user:</label>
+
+                            <div class="col">
+                                <input class="form-control ps-3" type="text" placeholder="@currentUser.UserName" readonly>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group py-5">
+                            <input type="submit" value="Add Book" class="btn btn-warning pt-2" />
+                            <a class="link-secondary" asp-action="Index">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </Authorized>
+</AuthorizeView>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+<script type="text/javascript">
+    $(".custom-file-input").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName));
+    });
+</script>
+}

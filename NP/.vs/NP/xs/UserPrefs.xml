@@ -1,0 +1,67 @@
+﻿<Properties StartupConfiguration="{D8AEE01F-B8A0-47E3-A168-91DCB74D30A9}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.ItemProperties.NP PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.NPTests FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NP/Data/NPDbContext.cs">
+    <Files>
+      <File FileName="NP/Controllers/HomeController.cs" />
+      <File FileName="NP/Views/_ViewStart.cshtml" />
+      <File FileName="NP/Views/_ViewImports.cshtml" />
+      <File FileName="NP/Models/ErrorViewModel.cs" />
+      <File FileName="NP/Models/Book.cs" />
+      <File FileName="NP/Models/User.cs" />
+      <File FileName="NP/Models/Location.cs" />
+      <File FileName="NP/appsettings.json" />
+      <File FileName="NP/Program.cs" />
+      <File FileName="NP/Data/NPDbContext.cs" Line="59" Column="1" />
+      <File FileName="NP/Data/AppDbInitializer.cs" />
+      <File FileName="NP/Controllers/LocationsController.cs" />
+      <File FileName="NP/Controllers/AdminController.cs" />
+      <File FileName="NP/Views/Book/Create.cshtml" />
+      <File FileName="NP/Recommender/RatingsLoader.cs" />
+      <File FileName="NP/Models/Rating.cs" />
+      <File FileName="NP/Recommender/PearsonCorrelation.cs" />
+      <File FileName="NP/Models/ML.cs" />
+      <File FileName="NP/Recommender/Recommender.cs" />
+      <File FileName="NP/Recommender/CosineSimilarity.cs" />
+      <File FileName="NP/Controllers/BookController.cs" />
+      <File FileName="NP/Views/Book/CosineRecommendations.cshtml" />
+      <File FileName="NP/Views/Book/PearsonRecommendations.cshtml" />
+      <File FileName="NP/Views/Book/Details.cshtml" />
+      <File FileName="NP/Views/Book/Index.cshtml" />
+      <File FileName="NP/Views/Shared/_Layout.cshtml" />
+      <File FileName="NP/Views/Home/Index.cshtml" />
+      <File FileName="NP/Views/Shared/_Layout.cshtml.css" />
+      <File FileName="NP/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="NP/Views/Shared/Error.cshtml" />
+      <File FileName="NP/appsettings.Development.json" />
+      <File FileName="NP/Migrations/20230316121351_mig-1.cs" />
+      <File FileName="NP/Migrations/20230318111750_mig-2.cs" />
+      <File FileName="NP/Migrations/NPDbContextModelSnapshot.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NP" expanded="True">
+            <Node name="NP" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Recommender" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Book" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

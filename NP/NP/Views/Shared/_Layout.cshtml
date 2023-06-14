@@ -1,0 +1,132 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using NP.Models;
+
+@inject SignInManager<User> SignInManager;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NP</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NP.styles.css" asp-append-version="true" />
+</head>
+<body class="pt-0">
+
+
+    @{
+        var Id = Context.Session.GetString("Id");
+        }
+    <header class="site-header sticky-top pb-1 pt-0">
+        <div class="pt-0" style="background-color: #FFAC1C">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg" style="background-color: #FFAC1C">
+                    <div class="container-fluid">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" asp-controller="Book" asp-action="Index" style="color:black;">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;">
+                                            My Books
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a asp-area="" asp-controller="Cabinet" asp-action="CurrentlyInPosession" class="dropdown-item" style="color:black;">Personal Cabinet</a></li>
+                                            <li><a asp-area="" asp-controller="Book" asp-action="Create" class="dropdown-item" style="color:black;">Add Book</a></li>
+                                            <li><a class="dropdown-item" href="#" style="color:black;">Drop At Location</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="#" style="color:black;">Buy Book</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" asp-area="" asp-controller="Locations" asp-action="Create" style="color:black;">Register Location</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" asp-area="" asp-controller="Account" asp-action="Logout" style="color:black;">Logout</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" asp-area="" asp-controller="Book" asp-action="CosineRecommendations" style="color:black;">Cosine</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" asp-area="" asp-controller="Book" asp-action="PearsonRecommendations" style="color:black;">Pearson</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex" role="search" asp-controller="Book" asp-action="Search" method="get">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm">
+                                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                                </form>
+
+                            </div>
+                        }
+                        else
+                        {
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" asp-area="" asp-controller="Book" asp-action="Index" style="color:black;">Home</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" asp-area="" asp-controller="Account" asp-action="Login" style="color:black;">Login</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" asp-area="" asp-controller="Account" asp-action="Register" style="color:black;">Register</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search" asp-controller="Book" asp-action="Search" method="get">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm">
+                                <button class="btn btn-outline-dark" type="submit">Search</button>
+                            </form>
+                        }
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-bg-tertiary py-4">
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-3">
+                        <a class="navbar-brand h1 p-2" style="color:black;" href="#">
+                            <img src="https://i.postimg.cc/pVKXdczn/book-256.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a class="navbar-brand h1 p-2" style="color:black;" href="#">
+                           Next Page
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - NP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
